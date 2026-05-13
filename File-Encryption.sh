@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "=========================================="
-echo "        Welcome to file encryption        "
+echo "        Welcome to file compression       "
 echo "=========================================="
 echo ""
 
@@ -37,7 +37,7 @@ fi
 
 echo ""
 echo ""
-echo "Which type of encryption do you want?"
+echo "Which type of compression do you want?"
 echo "1. gzip"
 echo "2. bzip2"
 echo "3. tar archive"
