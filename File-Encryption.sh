@@ -5,11 +5,13 @@ echo "        Welcome to file compression       "
 echo "=========================================="
 echo ""
 
+#Choose mode
 echo "Do you want to: (Reply with the number only!)"
 echo "1. Create a new file"
 echo "2. Import existing file"
 read mode
 
+#Handle the choice made
 if [ $mode = 1 ]; then 
 	echo "Give your file a name: "
 	read name
@@ -52,19 +54,19 @@ echo ""
 
 if [ $compressionType = 1 ]; then
 	gzip -c $input_file > $name.gz 
-	echo "Done! Created $name.gz"
+	echo "Done! Created ./$name.gz"
 
 elif [ $compressionType = 2 ]; then
 	bzip2 -c $input_file > $name.bz2
-	echo "Done! Created $name.bz2"
+	echo "Done! Created ./$name.bz2"
 
 elif [ $compressionType = 3 ]; then
 	tar -cf $name.tar $input_file
-	echo "Done! Created $name.tar"
+	echo "Done! Created ./$name.tar"
 
 elif [ $compressionType = 4 ]; then
 	zip $name.zip $input_file
-	echo "Done! Created $name.zip"
+	echo "Done! Created ./$name.zip"
 
 else exit
 fi
